@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>PowerBill</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header><b>⚡ PowerBill</b><span>SMART ELECTRICITY CALCULATOR</span></header>
+    <main>
+        <section class="hero">
+            <div><label>ELECTRICITY BILLING</label>
+                <h1>Calculate your bill<br><em>in seconds.</em></h1>
+                <p>Enter your consumer details and units used to generate a clear, printable bill.</p>
+            </div><strong>⚡</strong>
+        </section>
+        <div class="grid">
+            <section class="card">
+                <h2>Consumer Details</h2>
+                <p class="muted">Fill in the information below</p>
+                <form action="calculate" method="post"><label>Consumer Name</label><input name="consumerName"
+                        placeholder="e.g. Vedant Sanap" required><label>Consumer Number</label><input
+                        name="consumerNumber" placeholder="e.g. EB-2026-001" required><label>Units
+                        Consumed</label><input type="number" name="units" min="0" step=".01"
+                        placeholder="Enter units consumed" required><button>Calculate Electricity Bill →</button></form>
+            </section>
+            <section class="card">
+                <h2>₹ Current Rates</h2>
+                <p class="muted">Slab-wise electricity charges</p>
+                <div class="rate"><span>First 50 units</span><b>₹3.50 / unit</b></div>
+                <div class="rate"><span>Next 100 units</span><b>₹4.00 / unit</b></div>
+                <div class="rate"><span>Next 100 units</span><b>₹5.20 / unit</b></div>
+                <div class="rate"><span>Above 250 units</span><b>₹6.50 / unit</b></div>
+                <div class="tip">💡 Higher usage falls into higher-rate slabs. Each slab is applied progressively.</div>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>
